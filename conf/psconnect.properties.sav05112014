@@ -1,0 +1,22 @@
+# fichier de configuration de la connexion avec PSNext 
+# pour le batch webplace-conges version 1.0
+# mettre vos valeurs à la place des <...>
+psnext.url = http://192.168.250.82:8080/sciforma
+psnext.login = psnextadmin
+psnext.password = admin
+
+import.file = /opt/import/absences.csv
+
+# séparateur des répertoires "/" ou "\\"
+
+# autres paramétrages :
+psnext.nbMoisPasse = -6
+psnext.nbMoisFutur = 2
+journee.minimum = 7,60
+journee.maximum = 8,40
+journee(fac).minimum = 7,60
+journee(fac).maximum = 8,40
+semaine.minimum = 4,90
+semaine.maximum = 5,10
+semaine(fac).minimum = 4,90
+semaine(fac).maximum = 5,10

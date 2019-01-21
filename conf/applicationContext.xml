@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+
+    <bean id="contextApplicationContextProvider" class="fr.sciforma.context.ApplicationContextProvider"></bean>
+	
+	<bean id="sciforma" class="fr.sciforma.beans.Connector">
+		<property name="IP" value="https://april-migration.sciforma.net"/>
+        <property name="PORT" value="8080"/>
+        <property name="CONTEXTE" value="sciforma"/>
+        <property name="USER" value="psnextadmin"/>
+        <property name="PWD" value="Sc1form@2018"/>
+        <property name="DRIVER" value=""/>
+    </bean>
+	
+	
+	<bean id="absences" class="fr.sciforma.beans.SciformaField" >
+        <property name="sciformaField" value="D:\\Professionnel\\APIApril\\import\\absences.csv"/>
+		<!--property name="sciformaField" value="/opt/import/absences.csv"/-->
+    </bean>
+	
+	<bean id="nbMoisPasse" class="fr.sciforma.beans.SciformaField" >
+        <property name="sciformaField" value="-1"/>
+    </bean>
+	<bean id="nbMoisFutur" class="fr.sciforma.beans.SciformaField" >
+        <property name="sciformaField" value="13"/>
+    </bean>
+	<bean id="journee.minimum" class="fr.sciforma.beans.SciformaField" >
+        <property name="sciformaField" value="7.60"/>
+    </bean>
+	<bean id="journee.maximum" class="fr.sciforma.beans.SciformaField" >
+        <property name="sciformaField" value="8.40"/>
+    </bean>
+	<bean id="journeefac.minimum" class="fr.sciforma.beans.SciformaField" >
+        <property name="sciformaField" value="7.60"/>
+    </bean>
+	<bean id="journeefac.maximum" class="fr.sciforma.beans.SciformaField" >
+        <property name="sciformaField" value="8.40"/>
+    </bean>
+	<bean id="semaine.minimum" class="fr.sciforma.beans.SciformaField" >
+        <property name="sciformaField" value="4.90"/>
+    </bean>
+	<bean id="semaine.maximum" class="fr.sciforma.beans.SciformaField" >
+        <property name="sciformaField" value="5.10"/>
+    </bean>
+	<bean id="semainefac.minimum" class="fr.sciforma.beans.SciformaField" >
+        <property name="sciformaField" value="4.90"/>
+    </bean>
+	<bean id="semainefac.maximum" class="fr.sciforma.beans.SciformaField" >
+        <property name="sciformaField" value="5.10"/>
+    </bean>
+</beans>

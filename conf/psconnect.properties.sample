@@ -1,0 +1,20 @@
+# fichier de configuration de la connexion avec PSNext 
+# pour le batch webplace-conges version 2.0
+# mettre vos valeurs à la place des <...>
+psnext.url = <renseigner l'url vers votre instance PSNext>
+psnext.login = <renseigner le login ayant les droits pour la passerelle de votre instance PSNext>
+psnext.password = <renseigner le password associé au login>
+
+import.file = <renseigner l'emplacement du fichier à importer> # séparateur des répertoires "/" ou "\\"
+
+# autres paramétrages :
+psnext.nbMoisPasse = <renseigner le nombre de mois passés>
+psnext.nbMoisFutur = <renseigner le nombre de mois futurs>
+journee.minimum = <renseigner le nombre d'heures minimum d'une journée>
+journee.maximum = <renseigner le nombre d'heures maximum d'une journée>
+journee(fac).minimum = <renseigner le nombre d'heures minimum d'une journée(fac)>
+journee(fac).maximum = <renseigner le nombre d'heures maximum d'une journée(fac)>
+semaine.minimum = <renseigner le nombre d'heures minimum d'une semaine>
+semaine.maximum = <renseigner le nombre d'heures maximum d'une semaine>
+semaine(fac).minimum = <renseigner le nombre d'heures minimum d'une semaine(fac)>
+semaine(fac).maximum = <renseigner le nombre d'heures maximum d'une semaine(fac)>
